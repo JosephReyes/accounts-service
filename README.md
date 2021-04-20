@@ -5,7 +5,8 @@ Java backend for an accounts app
 1. Clone BE repo https://github.com/JosephReyes/accounts-service
 2. Clone FE repo https://github.com/JosephReyes/accounts-app
 3. cd to BE folder and run GraphQL server `./gradlew bootRun`
-4. cd to FE folder and run React app `npm start`
+4. cd to FE folder and install node modules `npm i`
+5. Run React app `npm start`
 
 ## How to run tests
 ### Unit tests
