@@ -1,0 +1,43 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Query {
+    accounts : [Account!]
+    transactions(id: String) : [Transaction!]
+}
+
+type Mutation {
+    addAccount(params: AddAccountParams!) : Account!
+    transfer(params: TransferParams!) : Boolean!
+}
+
+type Account {
+    id: ID!
+    name : String!
+    balance : String!
+    email : String!
+}
+
+type Transaction {
+    id: ID!
+    amount: String!
+    type: TransactionType!
+    timestamp: String!
+}
+
+enum TransactionType {
+    DEBIT, CREDIT
+}
+
+input AddAccountParams {
+    name: String!
+    email: String!
+}
+
+input TransferParams {
+    from: String!
+    to: String!
+    amount: String!
+}
